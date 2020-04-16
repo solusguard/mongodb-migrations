@@ -1,13 +1,13 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='mongodb-migrations',
-    version='0.7.0',
-    description='A database migration tool for MongoDB',
+    name='sg-mongodb-migrations',
+    version='0.1.0',
+    description='A database migration tool for MongoDB forked from David Xie\'s mongodb-migrations',
     long_description=__doc__,
-    url='https://github.com/DoubleCiti/mongodb-migrations',
-    author='David Xie',
-    author_email='david30xie@gmail.com',
+    url='https://github.com/solusguard/mongodb-migrations',
+    author='Joel Rathgaber',
+    author_email='joel@solusguard.com',
     license='GPLv3',
     packages=find_packages(),
     platforms='any',
@@ -15,12 +15,12 @@ setup(
     zip_safe=False,
     install_requires=[
         'pymongo>=3.2.1',
-        'configparser>=3.5.0',
-        'enum34>=1.1.6',
+        'configparser>=3.5.0'
     ],
     entry_points={
         'console_scripts': ['mongodb-migrate=mongodb_migrations.cli:main'],
     },
+    python_requires='>=3.6',
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
@@ -28,8 +28,6 @@ setup(
         'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',

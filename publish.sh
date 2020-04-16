@@ -6,4 +6,4 @@ rm -rf dist/ build/
 
 python setup.py sdist && \
 python setup.py bdist_wheel && \
-twine upload dist/*
+twine upload --username solusguard --password $PYPI_PASSWORD --repository-url http://pypi.solusguard.com:8080/ --skip-existing --non-interactive dist/*
